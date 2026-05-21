@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
-import ClientLayout from "@/components/ClientLayout";
 import "./globals.css";
 
 export const metadata: Metadata = {
   title: "AI Research Workspace",
-  description: "AI 驱动的个人知识管理与研究工作台",
+  description: "基于 RAG 的智能 URL 研究助手",
 };
 
 export default function RootLayout({
@@ -14,9 +13,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="zh-CN" className="h-full antialiased">
-      <body className="h-full bg-white text-gray-900">
-        <ClientLayout>{children}</ClientLayout>
-      </body>
+      <body className="h-full flex flex-col overflow-hidden">{children}</body>
     </html>
   );
 }
